@@ -21,7 +21,6 @@ with lib.hm.gvariant;
 
     "org/cinnamon/desktop/interface" = {
       clock-use-24h = false;
-      cursor-blink-time = 1200;
       cursor-size = 24;
       cursor-theme = "Adwaita";
       gtk-theme = "Mint-Y-Dark-Aqua";
