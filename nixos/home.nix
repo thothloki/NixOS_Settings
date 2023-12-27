@@ -5,12 +5,15 @@
 
   programs.home-manager.enable = true;
 
+  imports = [
+    	./cinnamon.nix
+  ];
   
   home.username = "thothloki";
   home.homeDirectory = "/home/thothloki";
   home.stateVersion = "23.11";
-
-  imports = [
-  	./cinnamon.nix
-  ];
+  
+  programs.firefox = {
+  	enable = true;
+  };
 }

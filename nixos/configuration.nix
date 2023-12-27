@@ -48,7 +48,20 @@
 
   # Enable the Cinnamon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+#  services.xserver.displayManager.sddm.enable = true;
+#  services.xserver.displayManager.gdm.enable = true;
+
+  services.xserver.desktopManager.cinnamon.enable = true; 
+#  services.xserver.desktopManager.plasma5.enable = true;
+#  services.xserver.desktopManager.xfce.enable = true;
+#  services.xserver.displayManager.defaultSession = "xfce";
+#  services.xserver.desktopManager.gnome.enable = true;
+#  services.xserver.desktopManager.mate.enable = true;
+#  services.xserver.windowManager.xmonad.enable = true;
+#  services.xserver.windowManager.twm.enable = true;
+#  services.xserver.windowManager.icewm.enable = true;
+#  services.xserver.windowManager.i3.enable = true;
+#  services.xserver.windowManager.herbstluftwm.enable = true;
   
   # Configure keymap in X11
   services.xserver = {
@@ -86,16 +99,16 @@
     description = "thothloki";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+    #  firefox
     #  thunderbird
     ];
   };
 
-   home-manager = {
-     useGlobalPkgs = true;
-     useUserPackages = true;
-     users.thothloki = import ./home.nix;
-   };  
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.thothloki = import ./home.nix;
+  };  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -117,6 +130,7 @@
 	qbittorrent
 	flatpak
 	dconf2nix
+	neofetch
     
     #WEB
     librewolf
@@ -124,7 +138,7 @@
 	megasync
 	rustdesk
 	remmina
-	youtube-dl
+	yt-dlp
 
     #CHAT
     schildichat-desktop
