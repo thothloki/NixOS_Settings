@@ -9,4 +9,4 @@ echo "Let's build the system!!!"
 sudo nixos-rebuild switch
 
 echo "Let's get some app configs copied over"
-cp FreeCAD/config/user.cfg ~/.config/FreeCAD
+cp FreeCAD/config/user.cfg ~/.config/FreeCAD/
